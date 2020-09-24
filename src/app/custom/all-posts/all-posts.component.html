@@ -1,0 +1,13 @@
+<p *ngFor="let c of onePost">
+  <b>Body:</b> {{c.body}}
+</p>
+
+<div *ngFor="let userPost of userPosts">
+  <b>ID</b> - {{userPost.id}}
+  Title - {{userPost.title}}
+<!--  <button [routerLink]="['body', userPost.id]">body</button>-->
+  <button (click)="getOnePost(userPost)">Post</button>
+  <hr>
+</div>
+
+<router-outlet></router-outlet>

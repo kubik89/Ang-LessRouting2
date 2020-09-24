@@ -1,0 +1,9 @@
+<div *ngFor="let oneUs of gotUsers">
+  ID - {{oneUs.id}}
+  Name - {{oneUs.name}}
+  Email - {{oneUs.email}}
+<!-- кнопкою для кожного ітерованого користувача як posts звертаюся до user.component.html-->
+  <button [routerLink]="['posts',oneUs.id]">my post</button>
+  <hr>
+</div>
+<router-outlet></router-outlet>
